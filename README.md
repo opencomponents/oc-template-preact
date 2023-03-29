@@ -23,12 +23,6 @@ $ npm install
 
 ## Extra info:
 
-### Linting
-
-Like in [Create React App](https://create-react-app.dev/docs/setting-up-your-editor/#displaying-lint-output-in-the-editor), linting will be done during the build, and you can extend it from .eslintrc.json, by setting the EXTEND_ESLINT environment variable to true.
-
-It can also be disabled completely by setting the `DISABLE_ESLINT_PLUGIN` environment variable to `true`.
-
 ### package.json requirements
 
 - `template.src` - the react App entry point - should export a react component as `default`
@@ -41,13 +35,6 @@ It can also be disabled completely by setting the `DISABLE_ESLINT_PLUGIN` enviro
 - The oc-client-browser is extended and will now expose all the available react-component at `oc.preactComponents[bundleHash]`
 - You can register an event handler within the [oc.events](https://github.com/opentable/oc/wiki/Browser-client#oceventsoneventname-callback) system for the the `oc:componentDidMount` event. The event will be fired immediately after the react app is mounted.
 - You can register an event handler within the [oc.events](https://github.com/opentable/oc/wiki/Browser-client#oceventsoneventname-callback) system for the the `oc:cssDidMount` event. The event will be fired immediately after the style tag will be added to the active DOM tree.
-
-### externals
-
-Externals are not bundled when packaging and publishing the component, for better size taking advantage of externals caching. OC will make sure to provide them at Server-Side & Client-Side rendering time for you.
-
-- React
-- ReactDOM
 
 ### features
 
@@ -103,4 +90,4 @@ Settings available at the moment:
 - `getSetting('baseUrl')` : return the [baseUrl of the oc-registry](https://github.com/opentable/oc/wiki/The-server.js#context-properties)
 - `getSetting('staticPath')` : return the path to the [static assets](https://github.com/opentable/oc/wiki/The-server.js#add-static-resource-to-the-component) of the OC component
 
-For more details, check the [`example app`](/acceptance-components/react-app/app.js)
+For more details, check the [`example app`](/acceptance-components/preact-app/app.js)
