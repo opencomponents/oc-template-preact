@@ -2,7 +2,7 @@
 
 const createCompile = require('oc-generic-template-compiler').createCompile;
 const compileStatics = require('oc-statics-compiler');
-const getInfo = require('oc-template-typescript-react').getInfo;
+const getInfo = require('oc-template-preact').getInfo;
 const react = require('@vitejs/plugin-react');
 
 const viteView = require('./to-publish/viteView');

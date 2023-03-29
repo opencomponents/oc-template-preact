@@ -1,4 +1,4 @@
-import { Context } from 'oc-template-typescript-react-compiler';
+import { Context } from 'oc-template-preact-compiler';
 import { AdditionalData, ClientProps, OcParameters } from './types';
 
 const database = [

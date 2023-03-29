@@ -1,8 +1,7 @@
-/// <reference types="oc-template-typescript-react" />
+/// <reference types="oc-template-preact" />
 
 /// <reference types="node" />
-/// <reference types="react" />
-/// <reference types="react-dom" />
+/// <reference types="preact" />
 
 declare module "*.css" {
   const classes: { readonly [key: string]: string };

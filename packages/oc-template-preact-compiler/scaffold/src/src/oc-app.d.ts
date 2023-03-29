@@ -1,2 +1,2 @@
-/// <reference types="oc-template-typescript-react" />
+/// <reference types="oc-template-preact" />
 /// <reference types="vite/client" />

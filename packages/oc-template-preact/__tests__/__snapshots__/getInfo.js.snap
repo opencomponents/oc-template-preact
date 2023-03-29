@@ -16,6 +16,6 @@ exports[`should return the correct info 1`] = `
       "url": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
     },
   ],
-  "type": "oc-template-typescript-react",
+  "type": "oc-template-preact",
 }
 `;

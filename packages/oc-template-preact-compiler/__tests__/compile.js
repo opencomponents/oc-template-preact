@@ -7,7 +7,7 @@ const fs = require('fs-extra');
 const nodeDir = require('node-dir');
 const path = require('path');
 const compile = require('../lib/compile.js');
-jest.mock('oc-template-typescript-react', () => ({
+jest.mock('oc-template-preact', () => ({
   getInfo() {
     return {
       version: '6.6.6',
@@ -79,14 +79,14 @@ const execute = (options, cb) => {
           return {
             source: !filePath.match(/\.png$/)
               ? source
-                  .replace(/"date":\d+/, '')
-                  .replace(/"hashKey":".*?",/g, '')
-                  .replace(/omponents\['.*?'\]/g, "omponents['dummyContent']")
-                  .replace(/key:'.*?'/g, '')
-                  .replace(
-                    /\["oc",.*?"reactComponents",.*?".*?"\]/g,
-                    '["oc", "reactComponents", "dummyContent"]'
-                  )
+                .replace(/"date":\d+/, '')
+                .replace(/"hashKey":".*?",/g, '')
+                .replace(/omponents\['.*?'\]/g, "omponents['dummyContent']")
+                .replace(/key:'.*?'/g, '')
+                .replace(
+                  /\["oc",.*?"reactComponents",.*?".*?"\]/g,
+                  '["oc", "reactComponents", "dummyContent"]'
+                )
               : 'img-binary',
             path: path.relative(__dirname, filePath)
           };

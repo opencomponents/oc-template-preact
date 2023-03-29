@@ -9,11 +9,11 @@
       "data": "src/server.ts",
       "template": {
         "src": "src/app.tsx",
-        "type": "oc-template-typescript-react"
+        "type": "oc-template-preact"
       }
     }
   },
   "devDependencies": {
-    "oc-template-typescript-react-compiler": "*"
+    "oc-template-preact-compiler": "*"
   }
 }

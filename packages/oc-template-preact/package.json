@@ -1,25 +1,25 @@
 {
-  "name": "oc-template-typescript-react",
-  "version": "4.0.0",
-  "description": "OC-Template-React",
+  "name": "oc-template-preact",
+  "version": "1.0.0",
+  "description": "OC-Template-Preact",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/guestlinelabs/oc-template-typescript-react.git"
+    "url": "https://github.com/open-components/oc-template-preact.git"
   },
   "bugs": {
-    "url": "https://github.com/guestlinelabs/oc-template-typescript-react/issues"
+    "url": "https://github.com/guestlinelabs/oc-template-preact/issues"
   },
-  "homepage": "https://github.com/guestlinelabs/oc-template-typescript-react#readme",
+  "homepage": "https://github.com/guestlinelabs/oc-template-preact#readme",
   "keywords": [
     "oc",
     "opencomponents",
-    "react",
+    "preact",
     "oc-template"
   ],
   "author": {
-    "name": "Piotr Bazydlo",
-    "email": "piotr.bazydlo@gmail.com"
+    "name": "Ricardo Devis Agullo",
+    "email": "mkredz@gmail.com"
   },
   "license": "MIT",
   "types": "./lib/oc-app.d.ts",
@@ -27,25 +27,12 @@
     "minimal-request": "3.0.0",
     "nice-cache": "0.0.5",
     "oc-generic-template-renderer": "2.0.9",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "preact": "^10.13.2"
   },
   "files": [
     "lib",
     "index.js",
     "README.md",
     "LICENSE"
-  ],
-  "externals": {
-    "react": {
-      "global": "React",
-      "url": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
-      "devUrl": "https://unpkg.com/react@18.2.0/umd/react.development.js"
-    },
-    "react-dom": {
-      "global": "ReactDOM",
-      "url": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
-      "devUrl": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"
-    }
-  }
+  ]
 }

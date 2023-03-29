@@ -1,7 +1,7 @@
 'use strict';
 
 const compile = require('./lib/compile');
-const template = require('oc-template-typescript-react');
+const template = require('oc-template-preact');
 
 module.exports = {
   compile,

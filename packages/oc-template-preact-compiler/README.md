@@ -1,3 +1,3 @@
-# oc-template-typescript-react-compiler - Compiler module
+# oc-template-preact-compiler - Compiler module
 
-OC template to compile components of type `oc-template-typescript-react`
+OC template to compile components of type `oc-template-preact`

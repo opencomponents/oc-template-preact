@@ -160,8 +160,7 @@ function verifyTypeScriptSetup(componentPath) {
     } else if (parsedCompilerOptions[option] !== valueToCheck) {
       appTsConfig.compilerOptions[option] = value;
       messages.push(
-        `${coloredOption} ${chalk.bold(valueToCheck == null ? 'must not' : 'must')} be ${
-          valueToCheck == null ? 'set' : chalk.cyan.bold(value)
+        `${coloredOption} ${chalk.bold(valueToCheck == null ? 'must not' : 'must')} be ${valueToCheck == null ? 'set' : chalk.cyan.bold(value)
         }` + (reason != null ? ` (${reason})` : '')
       );
     }
@@ -200,11 +199,11 @@ function verifyTypeScriptSetup(componentPath) {
     writeJson(paths.appTsConfig, appTsConfig);
   }
 
-  // Reference `oc-template-typescript-react-compiler` types
+  // Reference `oc-template-preact-compiler` types
   if (!fs.existsSync(paths.appTypeDeclarations)) {
     fs.writeFileSync(
       paths.appTypeDeclarations,
-      `/// <reference types="oc-template-typescript-react" />${os.EOL}`
+      `/// <reference types="oc-template-preact" />${os.EOL}`
     );
   }
 }

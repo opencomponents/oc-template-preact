@@ -1,4 +1,4 @@
-# oc-template-typescript-react
+# oc-template-preact
 
 React-templates with TypeScript support & utilities for the [OpenComponents](https://github.com/opentable/oc) template system
 
@@ -10,15 +10,15 @@ Based on Nick Balestra's work on [oc-template-react](https://github.com/opencomp
 
 | Name                                                                                       | Version                                                                                                                                             |
 | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`oc-template-typescript-react`](/packages/oc-template-typescript-react)                   | [![npm version](https://badge.fury.io/js/oc-template-typescript-react.svg)](http://badge.fury.io/js/oc-template-typescript-react)                   |
-| [`oc-template-typescript-react-compiler`](/packages/oc-template-typescript-react-compiler) | [![npm version](https://badge.fury.io/js/oc-template-typescript-react-compiler.svg)](http://badge.fury.io/js/oc-template-typescript-react-compiler) |
+| [`oc-template-preact`](/packages/oc-template-preact)                   | [![npm version](https://badge.fury.io/js/oc-template-preact.svg)](http://badge.fury.io/js/oc-template-preact)                   |
+| [`oc-template-preact-compiler`](/packages/oc-template-preact-compiler) | [![npm version](https://badge.fury.io/js/oc-template-preact-compiler.svg)](http://badge.fury.io/js/oc-template-preact-compiler) |
 
 ## Usage:
 
 Initialize a component with the oc-template-react and follow the CLI instructions
 
 ```
-$ npx oc init my-awesome-oc oc-template-typescript-react
+$ npx oc init my-awesome-oc oc-template-preact
 $ cd my-awesome-oc
 $ npm install
 ```
@@ -34,7 +34,7 @@ It can also be disabled completely by setting the `DISABLE_ESLINT_PLUGIN` enviro
 ### package.json requirements
 
 - `template.src` - the react App entry point - should export a react component as `default`
-- `template.type` - `oc-template-typescript-react`
+- `template.type` - `oc-template-preact`
 - required in `devDependencies` - `oc-template-react-compiler`, `react`, `react-dom`, `@types/react`
 
 ### conventions
@@ -76,7 +76,7 @@ the initial data passed from the server to the component.
 ##### Usage:
 
 ```javascript
-import { useData } from 'oc-template-typescript-react-compiler/utils/useData';
+import { useData } from 'oc-template-preact-compiler/utils/useData';
 
 const App = (props) => {
   // getData and getSetting are always available
