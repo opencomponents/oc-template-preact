@@ -10,11 +10,7 @@ const compile = require('../lib/compile.js');
 jest.mock('oc-template-preact', () => ({
   getInfo() {
     return {
-      version: '6.6.6',
-      externals: [
-        { name: 'react', global: 'React', url: 'cdn.com/react' },
-        { name: 'react-dom', global: 'ReactDOM', url: 'cdn.com/react-dom' }
-      ]
+      version: '6.6.6'
     };
   }
 }));
@@ -84,8 +80,8 @@ const execute = (options, cb) => {
                 .replace(/omponents\['.*?'\]/g, "omponents['dummyContent']")
                 .replace(/key:'.*?'/g, '')
                 .replace(
-                  /\["oc",.*?"reactComponents",.*?".*?"\]/g,
-                  '["oc", "reactComponents", "dummyContent"]'
+                  /\["oc",.*?"preactComponents",.*?".*?"\]/g,
+                  '["oc", "preactComponents", "dummyContent"]'
                 )
               : 'img-binary',
             path: path.relative(__dirname, filePath)

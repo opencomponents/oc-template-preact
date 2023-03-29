@@ -1,5 +1,4 @@
 const React = require('react');
-const ReactDOM = require('react-dom');
 const ReactDOMServer = require('react-dom/server');
 
 const createPredicate = require('./to-be-published/get-js-from-url');
@@ -7,21 +6,17 @@ const tryGetCached = require('./to-be-published/try-get-cached');
 
 module.exports = (options, callback) => {
   try {
-    const url = options.model.reactComponent.src;
-    const key = options.model.reactComponent.key;
-    const props = options.model.reactComponent.props;
-    const extractor = (key, context) => context.oc.reactComponents[key];
+    const url = options.model.preactComponent.src;
+    const key = options.model.preactComponent.key;
+    const props = options.model.preactComponent.props;
+    const extractor = (key, context) => context.oc.preactComponents[key];
     const getJsFromUrl = createPredicate({
       key,
       url,
-      globals: {
-        React,
-        ReactDOM,
-      },
       extractor,
     });
 
-    tryGetCached('reactComponent', key, getJsFromUrl, (err, CachedApp) => {
+    tryGetCached('preactComponent', key, getJsFromUrl, (err, CachedApp) => {
       if (err) return callback(err);
       try {
         const reactHtml = ReactDOMServer.renderToString(React.createElement(CachedApp, props));

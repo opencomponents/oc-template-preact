@@ -1,11 +1,11 @@
 const viewTemplate = ({ templateId, css, bundle, hash }) => `function(model){
   var modelHTML =  model.__html ? model.__html : '';
-  var staticPath = model.reactComponent.props._staticPath;
-  var props = JSON.stringify(model.reactComponent.props);
+  var staticPath = model.preactComponent.props._staticPath;
+  var props = JSON.stringify(model.preactComponent.props);
   window.oc = window.oc || {};
   window.oc.__typescriptReactTemplate = window.oc.__typescriptReactTemplate || { count: 0 };
-  oc.reactComponents = oc.reactComponents || {};
-  oc.reactComponents['${hash}'] = oc.reactComponents['${hash}'] || (${bundle});
+  oc.preactComponents = oc.preactComponents || {};
+  oc.preactComponents['${hash}'] = oc.preactComponents['${hash}'] || (${bundle});
   var count = window.oc.__typescriptReactTemplate.count;
   var templateId = "${templateId}-" + count;
   window.oc.__typescriptReactTemplate.count++;
@@ -18,7 +18,7 @@ const viewTemplate = ({ templateId, css, bundle, hash }) => `function(model){
     '${css ? "oc.events.fire(\\'oc:cssDidMount\\', \\'" + css + "\\');" : ''}' +
       'var targetNode = document.getElementById("' + templateId + '");' +
       'targetNode.setAttribute("id","");' +
-      'oc.reactComponents["${hash}"](' + props + ', targetNode);' +
+      'oc.preactComponents["${hash}"](' + props + ', targetNode);' +
     '});' +
   '</script>'
 }`;

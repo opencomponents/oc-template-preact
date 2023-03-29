@@ -23,7 +23,7 @@ const preactOCProviderTemplate = ({ viewPath }) => `
         if (err) {
           return cb(err);
         }
-        cb(null, rest, data.reactComponent.props);
+        cb(null, rest, data.preactComponent.props);
       });
     }
 

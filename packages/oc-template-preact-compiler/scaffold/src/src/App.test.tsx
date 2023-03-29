@@ -1,4 +1,3 @@
-import React from 'react';
 import { describe, it, afterEach, beforeEach, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { DataProvider } from 'oc-template-preact-compiler/utils/useData';

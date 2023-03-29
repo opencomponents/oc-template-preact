@@ -17,7 +17,7 @@ export const data = (context : any, callback : (error: any, data?: any) => void)
     const srcPathHasProtocol = context.staticPath.indexOf("http") === 0;
     const srcPath = srcPathHasProtocol ? context.staticPath : ("https:" + context.staticPath);
     return callback(null, Object.assign({}, {
-      reactComponent: {
+      preactComponent: {
         props
       }
     }));

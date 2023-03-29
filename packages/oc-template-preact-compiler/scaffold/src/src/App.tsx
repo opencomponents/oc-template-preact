@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'preact/hooks';
 import { useData } from 'oc-template-preact-compiler/utils/useData';
 import styles from './styles.css';
 import type { AdditionalData, ClientProps } from './types';
@@ -7,7 +7,7 @@ interface AppProps extends ClientProps {
   getMoreData?: boolean;
 }
 
-const App: React.FC<ClientProps> = () => {
+const App = () => {
   const { firstName, lastName, userId, getData, getSetting } = useData<AppProps>();
   const staticPath = getSetting('staticPath');
   const [additionalData, setAdditionalData] = useState<AdditionalData | null>(null);

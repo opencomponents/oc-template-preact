@@ -1,12 +1,10 @@
 const getJSFromUrl = require('../lib/to-be-published/get-js-from-url');
-const React = require('react');
 
 describe('When the module is called', () => {
   const predicate = getJSFromUrl({
-    globals: { React },
     url: 'cdn/path/to/file',
     key: '666',
-    extractor: jest.fn((key, context) => context.oc.reactComponents[key]),
+    extractor: jest.fn((key, context) => context.oc.preactComponents[key]),
   });
 
   test('Should correctly initialize a function', () => {
