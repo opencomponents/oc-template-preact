@@ -1,8 +1,6 @@
 # oc-template-preact
 
-React-templates with TypeScript support & utilities for the [OpenComponents](https://github.com/opentable/oc) template system
-
-Based on Nick Balestra's work on [oc-template-react](https://github.com/opencomponents/oc-template-react)
+Preact-templates with support & utilities for the [OpenComponents](https://github.com/opentable/oc) template system
 
 ---
 
