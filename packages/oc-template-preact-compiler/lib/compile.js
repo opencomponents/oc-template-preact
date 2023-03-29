@@ -3,13 +3,13 @@
 const createCompile = require('oc-generic-template-compiler').createCompile;
 const compileStatics = require('oc-statics-compiler');
 const getInfo = require('oc-template-preact').getInfo;
-const react = require('@vitejs/plugin-react');
+const { preact } = require('@preact/preset-vite');
 
 const viteView = require('./to-publish/viteView');
 const viteServer = require('./to-publish/viteServer');
 const verifyTypeScriptSetup = require('./verifyConfig');
 const higherOrderServerTemplate = require('./higherOrderServerTemplate');
-const reactOCProviderTemplate = require('./reactOCProviderTemplate');
+const preactOCProviderTemplate = require('./preactOCProviderTemplate');
 const htmlTemplate = require('./htmlTemplate');
 
 const compiler = createCompile({
@@ -17,8 +17,8 @@ const compiler = createCompile({
     viteView(
       {
         ...options,
-        plugins: [react()],
-        viewWrapper: ({ viewPath }) => reactOCProviderTemplate({ viewPath }),
+        plugins: [preact()],
+        viewWrapper: ({ viewPath }) => preactOCProviderTemplate({ viewPath }),
         htmlTemplate,
         externals: getInfo().externals
       },
