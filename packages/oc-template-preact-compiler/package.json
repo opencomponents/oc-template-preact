@@ -1,6 +1,6 @@
 {
   "name": "oc-template-preact-compiler",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -51,8 +51,6 @@
     "LICENSE"
   ],
   "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
     "lodash": "^4.17.4",
     "prettier": "^2.3.2",
     "prettier-config-guestline": "2.0.0"
