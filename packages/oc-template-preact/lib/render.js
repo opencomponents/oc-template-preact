@@ -1,5 +1,4 @@
-const React = require('react');
-const ReactDOMServer = require('react-dom/server');
+const render = require('preact-render-to-string');
 
 const createPredicate = require('./to-be-published/get-js-from-url');
 const tryGetCached = require('./to-be-published/try-get-cached');
@@ -19,11 +18,11 @@ module.exports = (options, callback) => {
     tryGetCached('preactComponent', key, getJsFromUrl, (err, CachedApp) => {
       if (err) return callback(err);
       try {
-        const reactHtml = ReactDOMServer.renderToString(React.createElement(CachedApp, props));
+        const preactHtml = render(CachedApp(props));
 
         const html = options.template(
           Object.assign({}, options.model, {
-            __html: reactHtml,
+            __html: preactHtml,
           })
         );
         return callback(null, html);

@@ -1,6 +1,6 @@
 {
   "name": "oc-template-preact",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "OC-Template-Preact",
   "main": "index.js",
   "repository": {
@@ -27,7 +27,8 @@
     "minimal-request": "3.0.0",
     "nice-cache": "0.0.5",
     "oc-generic-template-renderer": "2.0.9",
-    "preact": "^10.13.2"
+    "preact": "^10.13.2",
+    "preact-render-to-string": "^6.0.2"
   },
   "files": [
     "lib",
