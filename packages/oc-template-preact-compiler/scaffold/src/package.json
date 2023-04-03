@@ -20,9 +20,9 @@
     },
     "parameters": {
       "userId": {
-        "default": 0,
+        "default": 1,
         "description": "The user id from the user database",
-        "example": 0,
+        "example": 1,
         "mandatory": true,
         "type": "number"
       }
@@ -34,7 +34,7 @@
     "@testing-library/user-event": "^14.4.3",
     "jsdom": "^21.1.1",
     "oc-template-preact": "0.0.2",
-    "oc-template-preact-compiler": "0.0.5",
+    "oc-template-preact-compiler": "0.0.6",
     "preact": "^10.13.2",
     "typescript": "5.0.2",
     "vitest": "^0.29.7"
