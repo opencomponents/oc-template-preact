@@ -1,6 +1,6 @@
 {
   "name": "oc-template-preact-compiler",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -30,7 +30,7 @@
     "oc-generic-template-compiler": "2.1.0",
     "oc-statics-compiler": "2.0.10",
     "oc-template-preact": "0.0.2",
-    "oc-vite-compiler": "^1.1.1",
+    "oc-vite-compiler": "^2.1.0",
     "preact": "^10",
     "resolve": "^1.20.0"
   },
