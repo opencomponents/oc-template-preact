@@ -1,4 +1,8 @@
-# oc-template-preact
+# This package has been moved
+
+**Use the new oc-template-preact template on [vite-templates](https://github.com/opencomponents/vite-templates)**
+
+## oc-template-preact
 
 Preact-templates with support & utilities for the [OpenComponents](https://github.com/opentable/oc) template system
 
